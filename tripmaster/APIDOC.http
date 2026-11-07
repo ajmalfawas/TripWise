@@ -1,0 +1,49 @@
+###
+post http://127.0.0.1:8000/register/
+Content-Type: application/json
+
+
+{
+    "username":"cr7",
+    "email":"cr7@gmail.com",
+    "password":"cr7@123"
+}
+
+###
+post http://127.0.0.1:8000/trip/
+Content-Type: application/json
+Authorization: Basic anu:anu123
+
+{
+    "tittle":"Wayanad Trip",
+    "start_date":"2026-11-10",
+    "destination":"Wayanad"
+   
+   
+
+}
+###
+GET http://127.0.0.1:8000/trip/
+Authorization: Basic cr7:cr7@123
+Accept: application/json
+
+###
+GET http://127.0.0.1:8000/trip/1
+Authorization: Basic ajmal:ajmal123
+Accept: application/json
+
+
+###
+PUT http://127.0.0.1:8000/trip/1/
+Content-Type: application/json
+Authorization: Basic ajmal:ajmal123
+
+{
+    "tittle":"BLR Trip",
+    "start_date":"2026-11-10",
+    "destination":"Blr"
+}
+###
+DELETE http://127.0.0.1:8000/trip/5/
+Accept: application/json
+Authorization: Basic ajmal:ajmal123
